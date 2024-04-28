@@ -80,7 +80,7 @@ public class NotificationModule extends Module {
 
     if (BazaarNotifier.orders.size() != 0) {
 
-      int size = Math.min(shift + 10, BazaarNotifier.orders.size());
+      int size = Math.min(shift + 20, BazaarNotifier.orders.size());
 
       for (int i = shift; i < size; i++) {
         Order currentOrder = BazaarNotifier.orders.get(i);
@@ -133,7 +133,7 @@ public class NotificationModule extends Module {
 
   @Override
   protected int getMaxShift() {
-    return BazaarNotifier.orders.size() - 10;
+    return BazaarNotifier.orders.size() - 20;
   }
 
   protected int checkHoveredText() {
